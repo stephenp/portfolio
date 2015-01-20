@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+	<title>Stephen Pontes</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="description" content="Stephen Pontes' Online Portfolio" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300|Oswald:300' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+		
+		@-webkit-keyframes subtle {
+		  0%   { background-position: 0 0; }
+		  50%  { background-position: 0 -1231px; }
+		  100% { background-position: 0 0; }
+		}
+
+		@-moz-keyframes subtle {
+		  0%   { background-position: 0 0; }
+		  50%  { background-position: 0 -1231px; }
+		  100% { background-position: 0 0; }
+		}
+		
+		@keyframes subtle {
+		  0%   { background-position: 0 0; }
+		  50%  { background-position: 0 -1231px; }
+		  100% { background-position: 0 0; }
+		}
+		
+		
+		html,body {
+			margin: 0;
+			padding: 0;
+			font-family: 'Open Sans', serif;
+		}
+		
+		body {
+			background: #f1f1f1 url('img/fabric.png') left top repeat;
+			background-size: 100px 100px;
+			font-size: 14px;
+		}
+		
+		.title {
+			margin: 0;
+			font-family: 'Oswald', sans-serif;
+			font-weight: 300;
+			font-size: 1.75em;
+			text-transform: uppercase;
+		}
+		
+		#bio {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 350px;
+			height: 100%;
+			background: #000 url('img/header.png') left top repeat;
+			padding: 3em 2em 2em;
+			box-sizing: border-box;
+			text-align: center;
+			color: #fff;
+			overflow-y: scroll;
+			-webkit-animation: subtle 233s linear infinite alternate;
+			   -moz-animation: subtle 233s linear infinite alternate;
+			        animation: subtle 233s linear infinite alternate;
+		}
+		
+		#bio .prof-pic {
+			position: relative;
+			width: 120px;
+			height: 120px;
+			margin: 1em auto;
+			-webkit-transform: rotate(-45deg);
+			        transform: rotate(-45deg);
+		}
+
+		#bio .prof-pic:before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: -5px;
+			left: -5px;
+			width: 130px;
+			height: 130px;
+			background: rgba(0, 0, 0, 0.2);
+			-webkit-transition: all 150ms ease;
+			        transition: all 150ms ease;
+		}
+
+		#bio .prof-pic img {
+			width: 100%;
+			height: 100%;
+			border: 1px solid rgba(255, 255, 255, 0.1);
+			padding: 10px;
+			box-sizing: border-box;
+			-webkit-transition: padding 150ms ease;
+			        transition: padding 150ms ease;
+		}
+
+		#bio .prof-pic:hover img {
+			padding: 0;
+		}
+
+		#bio .prof-pic:hover:before {
+			width: 120px;
+			height: 120px;
+			top: 0;
+			left: 0;
+		}
+
+		#bio .subtitle {
+			text-align: left;
+			margin: 2.5em 0 0 0;
+		}
+
+		#bio p {
+			margin: 0.5em 0;
+			color: #ABABAB;
+			font-size: 1em;
+			line-height: 1.5em;
+			text-align: left;
+		}
+
+		#bio strong {
+			display: block;
+			margin-bottom: 0.5em;
+			color: #fff;
+			font-size: 0.8em;
+		}
+		
+		#bio span { display: block; }
+		
+		#bio .cta {
+			display: inline-block;
+			vertical-align: top;
+			margin: 1em 0 0 0;
+			color: #fff;
+			text-decoration: none;
+			font-family: 'Oswald', sans-serif;
+			font-weight: 300;
+			font-size: 1.1em;
+			text-transform: uppercase;
+			background: rgba(0, 0, 0, 0.2);
+			padding: 0.3em;
+			box-sizing: border-box;
+			-webkit-transition: background 150ms ease;
+			        transition: background 150ms ease;
+		}
+		
+		#bio .cta span {
+			border: 1px solid rgba(255, 255, 255, 0.1);
+			padding: 0.5em 1em;
+		}
+		
+		#bio .cta:hover {
+			background: rgba(0, 0, 0, 0.35);
+		}
+
+		.section { margin-left: 350px; }
+			
+		.section.padded {
+			padding: 2em;
+			box-sizing: border-box;
+		}
+
+		.skills {
+			margin: 1em auto;
+			padding: 0;
+			text-align: center;
+			list-style: none;
+		}
+		
+		.skills .skill {
+			font-family: 'Oswald', sans-serif;
+			font-weight: 300;
+			font-size: 1em;
+			text-transform: uppercase;
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			margin: 0 0.2em;
+			width: 54px;
+			height: 54px;
+			padding: 4px;
+			line-height: 54px;
+			background: rgba(255, 255, 255, 0.35);
+			-webkit-transform: rotate(-45deg);
+			        transform: rotate(-45deg);
+			text-align: center;
+		}
+		
+		.skills .skill:before {
+			position: absolute;
+			top: 5px;
+			left: 5px;
+			content: "";
+			display: block;
+			width: 50px;
+			height: 50px;
+			border: 1px solid rgba(0, 0, 0, 0.1);
+			z-index: -1;
+		}
+		
+		.skills .skill span {
+			display: block;
+			-webkit-transform: rotate(45deg);
+			        transform: rotate(45deg);
+		}
+
+		.portfolio-list {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		.portfolio-item {
+			position: relative;
+			vertical-align: top;
+			width: 100%;
+			min-height: 350px;
+			clear: both;
+			padding: 2em;
+			box-sizing: border-box;
+		}
+
+		.portfolio-item.alt {
+			width: 50%;
+			float: left;
+			clear: none;
+			text-align: right;
+		}
+
+		.portfolio-item .caption {
+			position: absolute;
+			bottom: 2em;
+			left: 2em;
+			color: #fff;
+			z-index: 1;
+		}
+		
+		.portfolio-item.alt .caption {
+			left: auto;
+			right: 2em;
+		}
+
+		.portfolio-item .cta {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 100%;
+			height: 100%;
+			background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.55) 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.55))); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.55) 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.55) 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.55) 100%); /* IE10+ */
+			background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.55) 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#8c000000',GradientType=0 ); /* IE6-9 */
+
+			-webkit-transition: opacity 200ms ease;
+			        transition: opacity 200ms ease;
+		}
+
+		.portfolio-item:hover .cta  { 
+			opacity: 0;
+		}
+
+		@media screen and (max-width: 990px) {
+
+			#bio {
+				width: 275px;
+			}
+
+			.section { margin-left: 275px; }
+			
+			.skills { max-width: 380px; }
+
+			.portfolio-item { min-height: 250px; }
+
+		}
+
+		@media screen and (max-width: 990px), screen and (max-height: 650px) {
+			body {
+				font-size: 12px;
+			}
+
+			#bio .prof-pic {
+				width: 100px;
+				height: 100px;
+				margin: 1em auto;
+			}
+	
+			#bio .prof-pic:before {
+				top: -5px;
+				left: -5px;
+				width: 110px;
+				height: 110px;
+			}
+	
+			#bio .prof-pic:hover:before {
+				width: 100px;
+				height: 100px;
+			}
+		}
+
+		@media screen and (max-width: 700px) {
+			
+			body {
+				font-size: 11px;
+			}
+
+			#bio {
+				position: static;
+				width: 100%;
+				height: auto;
+			}
+			
+			#bio .subtitle {
+				max-width: 300px;
+				margin: 2.5em auto 1.5em;
+			}
+			
+			#bio p {
+				max-width: 300px;
+				margin: 0.75em auto;
+			}
+
+			.section { margin-left: 0px; }
+			
+		}
+		
+	</style>
+
+</head>
+<body>
+
+	<div id="bio">
+		<div class="prof-pic">
+			<img src="img/me.png" alt="">
+		</div>
+		<h2 class="subtitle">
+			<strong>
+				<span class="name">Stephen Pontes</span>
+				<span class="job-title">Front End Developer</span>
+				<span class="job-location">Sacramento, CA</span>
+			</strong>
+		</h2>
+		
+		<p>I'm incredibly fortunate to have learned from awesomely talented coworkers over the years.</p>
+		<p>From off-the-shelf CMS platforms to completely custom code bases at both startups and Fortune 50 companies, I'm comfortable with it all.</p>
+		<p>While I might not speak your company's preferred coding language or framework fluently, I've always been able to get up to speed quickly.</p>
+
+<script type="text/javascript">
+//<![CDATA[
+<!--
+var x="function f(x){var i,o=\"\",l=x.length;for(i=l-1;i>=0;i--) {try{o+=x.c" +
+"harAt(i);}catch(e){}}return o;}f(\")\\\"function f(x,y){var i,o=\\\"\\\\\\\""+
+"\\\\,l=x.length;for(i=0;i<l;i++){if(i>(30+y))y*=2;y%=127;o+=String.fromChar" +
+"Code(x.charCodeAt(i)^(y++));}return o;}f(\\\"\\\\zpCTOFJQ\\\\\\\\010PZ@^N@C" +
+"\\\\\\\\006\\\\\\\\r\\\\\\\\014P\\\\\\\\022[FPP\\\\\\\\nd\\\\\\\\033WZUQJPz" +
+")+\\\\\\\\00371#7 ,$;##:*#\\\\\\\\1771<9\\\\\\\\ttw;5;(/`\\\\\\\\002}\\\\\\" +
+"\\003\\\\\\\\025\\\\\\\\003?F[Z\\\\\\\\024\\\\\\\\030\\\\\\\\010\\\\\\\\004" +
+"U\\\\\\\\013\\\\\\\\010\\\\\\\\032O\\\\\\\\031\\\\\\\\037R\\\\\\\\007\\\\\\" +
+"\\033\\\\\\\\000\\\\\\\\025\\\\\\\\037DV\\\\\\\\t\\\\\\\\013\\\\\\\\035\\\\" +
+"\\\\023@<-g0<\\\\\\\\027E09\\\"\\\\,30)\\\"(f};)lo,0(rtsbus.o nruter};)i(tA" +
+"rahc.x=+o{)--i;0=>i;1-l=i(rof}}{)e(hctac};l=+l;x=+x{yrt{)15=!)31/l(tAedoCra" +
+"hc.x(elihw;lo=l,htgnel.x=lo,\\\"\\\"=o,i rav{)x(f noitcnuf\")"               ;
+while(x=eval(x));
+//-->
+//]]>
+</script>
+
+
+	</div>
+	
+	<div class="section padded">
+		<ul class="skills">
+			<li class="skill"><span>HTML</span></li>
+			<li class="skill"><span>CSS</span></li>
+			<li class="skill"><span>JS</span></li>
+			<li class="skill"><span>JQ</span></li>
+			<li class="skill"><span>GIT</span></li>
+			<li class="skill"><span>SVN</span></li>
+			<li class="skill"><span>PS</span></li>
+			<li class="skill"><span>AI</span></li>
+		</ul>
+		<p></p>
+	</div>
+
+	<div class="section">
+		<ul class="portfolio-list">
+			<li class="portfolio-item" style="background: url('img/portfolio/taylor.jpg') center top no-repeat; background-size: cover;">
+				<div class="caption">
+					<h1 class="title">Taylor Swift</h1>
+				</div>				
+				<a href="http://taylorswift.com" class="cta"></a>
+			</li>
+
+			<li class="portfolio-item alt" style="background: url('img/portfolio/afi.jpg') center top no-repeat; background-size: cover;">
+				<div class="caption">
+					<h1 class="title">AFI</h1>
+				</div>
+				<a href="http://despairfaction.com" class="cta"></a>
+			</li>
+
+			<li class="portfolio-item alt" style="background: url('img/portfolio/stevie.jpg') center top no-repeat; background-size: cover;">
+				<div class="caption">
+					<h1 class="title">Stevie Nicks</h1>
+				</div>
+				<a href="http://stevienicksofficial.com" class="cta"></a>
+			</li>
+
+			<li class="portfolio-item" style="background: url('img/portfolio/linkinpark.jpg') center top no-repeat; background-size: cover;">
+				<div class="caption">
+					<h1 class="title">Linkin Park</h1>
+				</div>
+				<a href="http://linkinpark.com" class="cta"></a>
+			</li>
+
+			<li class="portfolio-item alt" style="background: url('img/portfolio/ladyant.jpg') center top no-repeat; background-size: cover;">
+				<div class="caption">
+					<h1 class="title">Lady Antebellum</h1>
+				</div>
+				<a href="http://ladyantebellum.com" class="cta"></a>
+			</li>
+			
+			<li class="portfolio-item alt" style="background: url('img/portfolio/nicky.jpg') center top no-repeat; background-size: cover;">
+				<div class="caption">
+					<h1 class="title">Nicky Minaj</h1>
+				</div>
+				<a href="http://mypinkfriday.com" class="cta"></a>
+			</li>
+
+			<li class="portfolio-item" style="background: url('img/portfolio/groundctrl.jpg') center top no-repeat; background-size: cover;">
+				<div class="caption">
+					<h1 class="title">ground(ctrl)</h1>
+				</div>
+				<a href="http://groundctrl.com" class="cta"></a>
+			</li>
+
+			<li class="portfolio-item alt" style="background: url('img/portfolio/emblem3.jpg') center top no-repeat; background-size: cover;">
+				<div class="caption">
+					<h1 class="title">Emblem 3</h1>
+				</div>
+				<a href="http://emblem3.com" class="cta"></a>
+			</li>
+
+			<li class="portfolio-item alt" style="background: url('img/portfolio/jackson.jpg') center top no-repeat; background-size: cover;">
+				<div class="caption">
+					<h1 class="title">Jackson Guthy</h1>
+				</div>
+				<a href="http://jacksonguthy.com" class="cta"></a>
+			</li>
+
+		</ul>
+	</div>
+
+</body>
+</html>
