@@ -6,18 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<meta name="description" content="Stephen Pontes' Online Portfolio" />
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300|Oswald:300' rel='stylesheet' type='text/css'>
-	<script type="text/javascript">
-		document.addEventListener("DOMContentLoaded", function(event) {
-			var bio    = document.getElementById("bio"),
-				offset = 0;
-
-			window.onscroll = function() {
-				offset = Math.floor(0.15 * (window.pageYOffset));
-				bio.style.backgroundPosition = "0 -" + offset + "px";
-			}
-		});
-	</script>
-
 	<style type="text/css">		
 		html,body {
 			margin: 0;
@@ -210,6 +198,9 @@
 			clear: both;
 			padding: 2em;
 			box-sizing: border-box;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
 		}
 
 		.portfolio-item.alt {
@@ -254,7 +245,6 @@
 		.portfolio-item:hover .cta  { opacity: 0; }
 
 		@media screen and (max-width: 990px) {
-
 			#bio { width: 275px; }
 
 			.section { margin-left: 275px; }
@@ -262,7 +252,6 @@
 			.skills { max-width: 380px; }
 
 			.portfolio-item { min-height: 250px; }
-
 		}
 
 		@media screen and (max-width: 990px), screen and (max-height: 650px) {
@@ -288,7 +277,6 @@
 		}
 
 		@media screen and (max-width: 700px) {
-			
 			body { font-size: 11px; }
 
 			#bio {
@@ -309,9 +297,7 @@
 			}
 
 			.section { margin-left: 0px; }
-			
 		}
-		
 	</style>
 
 	<script>
@@ -322,7 +308,6 @@
 	
 	  ga('create', 'UA-1059849-4', 'auto');
 	  ga('send', 'pageview');
-	
 	</script>
 
 </head>
@@ -364,7 +349,6 @@
 		//]]>
 		</script>
 
-
 	</div>
 	
 	<div class="section padded">
@@ -383,70 +367,84 @@
 
 	<div class="section">
 		<ul class="portfolio-list">
-			<li class="portfolio-item" style="background: url('img/portfolio/taylor.jpg') center top no-repeat; background-size: cover;">
+			<li class="portfolio-item" style="background-image: url('img/portfolio/taylor.jpg')">
 				<div class="caption">
 					<h1 class="title">Taylor Swift</h1>
 				</div>				
 				<a href="http://taylorswift.com" class="cta"></a>
 			</li>
 
-			<li class="portfolio-item alt" style="background: url('img/portfolio/afi.jpg') center top no-repeat; background-size: cover;">
+			<li class="portfolio-item alt" style="background-image: url('img/portfolio/afi.jpg')">
 				<div class="caption">
 					<h1 class="title">AFI</h1>
 				</div>
 				<a href="http://despairfaction.com" class="cta"></a>
 			</li>
 
-			<li class="portfolio-item alt" style="background: url('img/portfolio/stevie.jpg') center top no-repeat; background-size: cover;">
+			<li class="portfolio-item alt" style="background-image: url('img/portfolio/stevie.jpg')">
 				<div class="caption">
 					<h1 class="title">Stevie Nicks</h1>
 				</div>
 				<a href="http://stevienicksofficial.com" class="cta"></a>
 			</li>
 
-			<li class="portfolio-item" style="background: url('img/portfolio/linkinpark.jpg') center top no-repeat; background-size: cover;">
+			<li class="portfolio-item" style="background-image: url('img/portfolio/linkinpark.jpg')">
 				<div class="caption">
 					<h1 class="title">Linkin Park</h1>
 				</div>
 				<a href="http://linkinpark.com" class="cta"></a>
 			</li>
 
-			<li class="portfolio-item alt" style="background: url('img/portfolio/ladyant.jpg') center top no-repeat; background-size: cover;">
+			<li class="portfolio-item alt" style="background-image: url('img/portfolio/ladyant.jpg')">
 				<div class="caption">
 					<h1 class="title">Lady Antebellum</h1>
 				</div>
 				<a href="http://ladyantebellum.com" class="cta"></a>
 			</li>
 			
-			<li class="portfolio-item alt" style="background: url('img/portfolio/nicky.jpg') center top no-repeat; background-size: cover;">
+			<li class="portfolio-item alt" style="background-image: url('img/portfolio/nicky.jpg')">
 				<div class="caption">
 					<h1 class="title">Nicky Minaj</h1>
 				</div>
 				<a href="http://mypinkfriday.com" class="cta"></a>
 			</li>
 
-			<li class="portfolio-item" style="background: url('img/portfolio/groundctrl.jpg') center top no-repeat; background-size: cover;">
+			<li class="portfolio-item" style="background-image: url('img/portfolio/groundctrl.jpg')">
 				<div class="caption">
 					<h1 class="title">ground(ctrl)</h1>
 				</div>
 				<a href="http://groundctrl.com" class="cta"></a>
 			</li>
 
-			<li class="portfolio-item alt" style="background: url('img/portfolio/emblem3.jpg') center top no-repeat; background-size: cover;">
+			<li class="portfolio-item alt" style="background-image: url('img/portfolio/emblem3.jpg')">
 				<div class="caption">
 					<h1 class="title">Emblem 3</h1>
 				</div>
 				<a href="http://emblem3.com" class="cta"></a>
 			</li>
 
-			<li class="portfolio-item alt" style="background: url('img/portfolio/jackson.jpg') center top no-repeat; background-size: cover;">
+			<li class="portfolio-item alt" style="background-image: url('img/portfolio/jackson.jpg')">
 				<div class="caption">
 					<h1 class="title">Jackson Guthy</h1>
 				</div>
 				<a href="http://jacksonguthy.com" class="cta"></a>
 			</li>
-
 		</ul>
 	</div>
+
+<script type="text/javascript">
+	document.addEventListener("DOMContentLoaded", function(event) {
+		var bio    = document.getElementById("bio"),
+			offset = 0;
+
+		window.onscroll = parallax;
+	});
+
+	function parallax() {
+		offset = Math.floor(0.15 * (window.pageYOffset));
+		bio.style.backgroundPosition = "0 -" + offset + "px";
+	}
+</script>
+
 </body>
 </html>
